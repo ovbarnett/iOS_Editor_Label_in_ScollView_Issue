@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iOS_Editor_Label_in_ScollView_Issue.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column ="0"
+                    x:Name="LabelTextFrame" 
+                    IsVisible="True"  
+                    Padding="5" 
+                    Margin="0,5,0,0" 
+                    BackgroundColor="Cyan" 
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" >
+
+
+            <ScrollView Grid.Row="0" Grid.Column ="0" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Label Grid.Row="0" Grid.Column="0" 
+                       x:Name="LabelText" VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       IsVisible="True"
+                       FontSize="14"
+                        TextColor="Black"
+                        FontAutoScalingEnabled ="False"
+                       Text="Line1&#xa;Line2&#xa;Line3&#xa;Line4&#xa;Line5&#xa;Line6&#xa;Line7&#xa;Line8&#xa;Line9&#xa;Line10"
+                       HeightRequest="150"
+                       />
+            </ScrollView>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column ="0"
+                    x:Name="EditorTextFrame" 
+                    IsVisible="True"  
+                    Padding="5" 
+                    Margin="0,5,0,0" 
+                    BackgroundColor="Cyan" 
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" >
+
+            <ScrollView Grid.Row="1" Grid.Column ="0" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <Editor Grid.Row="1" Grid.Column ="0" 
+                        x:Name="EditorText" 
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="14"
+                        TextColor="Black"
+                        FontAutoScalingEnabled ="False"
+                        IsSpellCheckEnabled ="True"
+                        MaxLength="2000"
+                        AutoSize="TextChanges"
+                        IsVisible="True" 
+                        Text="Line1&#xa;Line2&#xa;Line3&#xa;Line4&#xa;Line5&#xa;Line6&#xa;Line7&#xa;Line8&#xa;Line9&#xa;Line10"
+                       HeightRequest="150"
+                        />
+
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>
